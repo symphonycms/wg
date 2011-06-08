@@ -1,3 +1,10 @@
+##META
+* Doc Version: 1
+* Author: Giel Berkers
+* Applies to: 2.x
+* Based on: 2.x
+* [Production URL]()
+
 # A view on static pages #
 
 First of all: let me say that _'all roads lead to Rome'_, meaning that this article is a single view of a single person
@@ -32,7 +39,7 @@ has some serious drawbacks. For example:
 The first thing you need to understand is that Symphony works in no way like these other CMS-es. A 'page' in Symphony
 is nothing more than a container for encapsulating content (datasources) and occasionally handling some logic (events).
 
-If you structure your site, make sure to make the structure in 'Blueprints » Pages'. This is ofcourse pretty obvious
+If you structure your site, make sure to make the structure in 'Blueprints ï¿½ Pages'. This is ofcourse pretty obvious
 for dynamic pages. For example: you _would_ create a unique page for a news-section, and provide that with a parameter
 and the right datasource to show the latest news items for example.
 
@@ -144,7 +151,7 @@ used. In the above example, the URL's would then be:
 - www.your-website.com/projects/detail/handle/ _= the project-detail page, showing the complete project._
 
 And if the client _really_ wants a new page (which is an average of 1-2 times a year) they give you a call and you add
-it for them. In my experience with previous CMS-es where it wás possible for the client to add their own pages they
+it for them. In my experience with previous CMS-es where it wï¿½s possible for the client to add their own pages they
 would still call us when they wanted a new page, so nothing much changes there really...
 
 So you see, it's more a way of thinking. As I said before, all roads lead to Rome and this is just one
