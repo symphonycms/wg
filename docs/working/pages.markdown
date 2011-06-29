@@ -30,7 +30,7 @@ First-time users of Symphony often try to mimic this with their first websites (
 
 ## Forget pages, think content! ##
 
-A _page_ in Symphony is nothing more than a container for encapsulating content (data sources) and occasionally handling some logic (events).
+A page in Symphony is nothing more than a container for encapsulating content (data sources) and occasionally handling some logic (events).
 
 The best way to structure your site is in **Blueprints > Pages**. This is fairly obvious for dynamic pages — you would create a unique page for a News section, and provide that with a parameter and the right data source to show the latest news items.
 
@@ -49,7 +49,7 @@ You would need 7 pages, which result in 7 XSL documents:
 * home.xsl
 * about-us.xsl
 * our-vision.xsl
-* our-products.xsl
+* products.xsl
 * news.xsl
 * news-detail.xsl
 * contact.xsl
