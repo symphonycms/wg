@@ -117,15 +117,13 @@ All these items will have their own section and their own page, resulting in URL
 * www.your-website.com/publications/handle/
 * www.your-website.com/downloads/category/
 
-Now if you look at _projects_ or _publications_ in this example, it would appear that each project or publication would
-have its own page. But in reality, you only have one XSL template that deals with the logic. An even better approach is to add a detail sub-page; this keeps your XSL clean and reduces page rendering time spent on extraneous data sources which will not be
-used. In the above example, the URLs would become:
+Now if you look at _projects_ or _publications_, it would appear that each project or publication would have its own page. But in reality, you only have one XSL template that deals with the logic. An even better approach is to add a detail sub-page; this keeps your XSL clean and reduces page rendering time spent on extraneous data sources that  will not be used. In the above example, the URLs would become:
 
-* www.your-website.com/news/ _= news homepage, showing the latest 2 items for example._
-* www.your-website.com/news/detail/handle/ _= the complete news item which is chosen by the visitor._
+* www.your-website.com/news/ _= news page, perhaps showing the latest 5 items._
+* www.your-website.com/news/detail/handle/ _= a complete news item chosen by the visitor._
 * www.your-website.com/projects/ _= projects homepage, showing all the projects with a picture and a short summary._
-* www.your-website.com/projects/detail/handle/ _= the project-detail page, showing the complete project._
+* www.your-website.com/projects/detail/handle/ _= the project detail page, showing the complete project._
 
 So you see, it's more a way of thinking. As I said before, all roads lead to Rome, and this is just one of many ways on how you could approach pages in Symphony. I hope this article has given you some insight on how to do this.
 
-Now, let's build some static pages shall we?
+Now, let's build some static pages, shall we?
