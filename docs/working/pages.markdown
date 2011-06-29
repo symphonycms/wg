@@ -7,13 +7,13 @@
 
 # A view on static pages #
 
-First of all: let me say that _'all roads lead to Rome'_, meaning that this article is a single view of a single person
+First of all: let me say that "all roads lead to Rome", meaning that this article is a single view of a single person
 on how to combine static and dynamic content in Symphony. It summarizes the things I've learned about this from when I
 started with Symphony until today.
 
 ## First timers, beware! ##
 
-A common feature of many content management systems is the ability to build a tree-like structure of pages. This allows you to create pages with a parent-child relationship, and defining some basic content fields such as a title and body.
+A common feature of many content management systems is the ability to build a tree-like structure of pages. This allows you to create pages with a parent-child relationship, and define some basic content fields such as a title and body.
 
 First-time users of Symphony often try to mimic this with their first websites (I know I did!) For example, you might create a section called 'Pages' and add some fields like 'title', 'body' and 'parent' ('parent' is a dynamic selectbox, with which you can select other entries of the Pages section to use as parent). Next, you'd create a single page (called 'content' for example), with a parameter 'handle' or 'id' to get the right entry out of your Pages section. This might work, but it has some serious drawbacks:
 
