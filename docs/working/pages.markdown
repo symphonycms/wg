@@ -15,14 +15,14 @@ started with Symphony until today.
 
 A common feature of many content management systems is the ability to build a tree-like structure of pages. This allows you to create pages with a parent-child relationship, and defining some basic content fields such as a title and body.
 
-First-time users of Symphony often try to mimic this with their first websites (I know I did!). For example, you create a section called 'Pages' and add some fields like 'title', 'body' and 'parent' ('parent' is a dynamic selectbox, with which you can select other entries of the Pages section to use as parent). Next, you create a single page (called 'content' for example), with a parameter 'handle' or 'id' to get the right entry out of your Pages section. This might work, but it has some serious drawbacks:
+First-time users of Symphony often try to mimic this with their first websites (I know I did!) For example, you might create a section called 'Pages' and add some fields like 'title', 'body' and 'parent' ('parent' is a dynamic selectbox, with which you can select other entries of the Pages section to use as parent). Next, you'd create a single page (called 'content' for example), with a parameter 'handle' or 'id' to get the right entry out of your Pages section. This might work, but it has some serious drawbacks:
 
 * The URLs of your static pages will always end up like:
     * www.your-website.com/content/12/
     * www.your-website.com/content/my-handle/
-* You have to do some extra logic to create navigation. Especialy when you have mixed static and dynamic pages!
-* If you want to hide a page from the navigation you would have to add an extra field to your Pages section.
-* If you have multiple navigations (such as a top menu, a utilities menu and a footer menu) this also brings some extra fields to your Pages section.
+* You have to do some extra logic to create navigation, especially when you have mixed static and dynamic pages.
+* If you want to hide a page from the navigation, you would have to add an extra field to your Pages section.
+* If you have multiple navigations (such as a top menu, a utilities menu and a footer menu) this also requires some extra fields in your Pages section.
 * It's particularly hard to make exceptions; for example:
     * If your client wants a different picture on each page you would have to add an extra field to the Pages section.
     * If you want to change the order of the pages you would have to depend on an [extension](https://github.com/nickdunn/order_entries).
@@ -32,7 +32,7 @@ First-time users of Symphony often try to mimic this with their first websites (
 
 A 'page' in Symphony is nothing more than a container for encapsulating content (data sources) and occasionally handling some logic (events).
 
-The best way to structure your site is in 'Blueprints > Pages'. This is fairly obvious for dynamic pages. For example, you _would_ create a unique page for a News section, and provide that with a parameter and the right data source to show the latest news items.
+The best way to structure your site is in 'Blueprints > Pages'. This is fairly obvious for dynamic pages — you would create a unique page for a News section, and provide that with a parameter and the right data source to show the latest news items.
 
 But here's the trick: **all** pages should be added here, also static pages! So, if you have a site structure like:
 
@@ -58,7 +58,7 @@ You would need 7 pages, which result in 7 XSL documents:
 
 That's true. But that isn't a problem, is it? In fact, it's ideal! Think about all the features that come straight out of the box:
 
-* You would have nice URLs.
+* You will have nice URLs.
 * You can make use of Symphony's built-in page logic:
     * Use types to create smart navigation data sources.
     * Have correct parent-child relationships.
@@ -70,7 +70,7 @@ That's true. But that isn't a problem, is it? In fact, it's ideal! Think about a
 If you think 'content' and not 'pages' the most obvious thing to do is to create a data source called 'Page Content'.
 This could have your common fields like 'title', 'content', and one field provided by an extension: a ['pages' field](https://github.com/symphonycms/pagesfield). This allows you to link your entry to a page. Now when you create your data source, filter the pages field by `{$current-page}` to get the correct entry.
 
-The XSL template could look something like this:
+The XSLT could look something like this:
 
     <xsl:template match="data">
         <h1>
@@ -79,7 +79,7 @@ The XSL template could look something like this:
         <xsl:copy-of select="page-content/entry/content/*" />
     </xsl:template>
 
-To fully support the DRY principle and code reuse, you could make a utility for static content:
+To fully support the DRY principle for code reuse, you could make a utility for static pages:
 
 Utility:
 
@@ -97,15 +97,11 @@ Page:
         <xsl:apply-templates select="page-content" mode="static" />
     </xsl:template>
 
-This makes it quite easy to manage your static content. Now you no longer have to make exceptions for things like:
-
-* The client want a banner on static page A, but not on static page B
-* Every page should have a different image on top
-* All pages have a picture, except page C, which has a Flash element.
+This makes it quite easy to manage your static content, and provides a simple way to handle exceptions.
 
 ## Hold the phone! All of this means my client will not be able to add new pages by himself! ##
 
-That's also true. But is adding pages _really_ what your client wants? In my experience as a web developer, I found that 99% of the clients I meet don't need to add new pages to their website on a regular basis. What they **do** add are:
+That's also true. But is adding pages _really_ what your client wants? In my experience as a web developer, I've found that 99% of my clients don't need to add new pages to their site on a regular basis. What they **do** add are:
 
 * News items
 * Projects
@@ -115,17 +111,16 @@ That's also true. But is adding pages _really_ what your client wants? In my exp
 * FAQs
 * Pictures
 
-All these items should have their own section and their own page so you would end up with URL's like:
+All these items should have their own section and their own page so you would end up with URLs like:
 
 * www.your-website.com/news/handle/
 * www.your-website.com/projects/handle/
 * www.your-website.com/publications/handle/
 * www.your-website.com/downloads/category/
 
-Now if you look at 'projects' or 'publications' in this example, it _would_ look like each project and publication would
-have it's own web page. But in reality you only have one XSL page which deals with the logic. A more clear approach would
-be to add a detail sub-page so you keep your XSL clean and don't waste CPU-loops on loading datasources which will not be
-used. In the above example, the URL's would then be:
+Now if you look at 'projects' or 'publications' in this example, it would appear that each project and publication would
+have its own page. But in reality, you only have one XSL template which deals with the logic. An even better approach is to add a detail sub-page; this keeps your XSL clean and reduces processing time spent on loading data sources which will not be
+used. In the above example, the URLs would become:
 
 * www.your-website.com/news/ _= news homepage, showing the latest 2 items for example._
 * www.your-website.com/news/detail/handle/ _= the complete news item which is chosen by the visitor._
