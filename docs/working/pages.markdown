@@ -15,7 +15,7 @@ started with Symphony until today.
 
 A common feature of many content management systems is the ability to build a tree-like structure of pages. This allows you to create pages with a parent-child relationship, and define some basic content fields such as a title and body.
 
-First-time users of Symphony often try to mimic this with their first websites (I know I did!) For example, you might create a section called 'Pages' and add some fields like 'title', 'body' and 'parent' ('parent' is a dynamic selectbox, with which you can select other entries of the Pages section to use as parent). Next, you'd create a single page (called 'content' for example), with a parameter 'handle' or 'id' to get the right entry out of your Pages section. This might work, but it has some serious drawbacks:
+First-time users of Symphony often try to mimic this with their first websites (I know I did!) For example, you might create a section called _Pages_ and add some fields like _Title_, _Body_ and _Parent_ (_Parent_ is a dynamic selectbox, with which you can select other entries of the Pages section to use as parent). Next, you'd create a single page (called _Content_ for example), with a parameter _handle_ or _id_ to get the right entry out of your Pages section. This might work, but it has some serious drawbacks:
 
 * The URLs of your static pages will always end up like:
     * www.your-website.com/content/12/
