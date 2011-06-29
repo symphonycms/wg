@@ -30,11 +30,11 @@ First-time users of Symphony often try to mimic this with their first websites (
 
 ## Forget pages, think content! ##
 
-A 'page' in Symphony is nothing more than a container for encapsulating content (data sources) and occasionally handling some logic (events).
+A _page_ in Symphony is nothing more than a container for encapsulating content (data sources) and occasionally handling some logic (events).
 
-The best way to structure your site is in 'Blueprints > Pages'. This is fairly obvious for dynamic pages — you would create a unique page for a News section, and provide that with a parameter and the right data source to show the latest news items.
+The best way to structure your site is in **Blueprints > Pages**. This is fairly obvious for dynamic pages — you would create a unique page for a News section, and provide that with a parameter and the right data source to show the latest news items.
 
-But here's the trick: **all** pages should be added here, also static pages! So, if you have a site structure like:
+But here's the trick: all pages should be added here, also static pages! So, if you have a site structure like:
 
 * Home
 * About us
@@ -54,7 +54,7 @@ You would need 7 pages, which result in 7 XSL documents:
 * news-detail.xsl
 * contact.xsl
 
-## But that would mean I would end up with a lot of XSL-documents, which are mostly identical! ##
+## But that would mean I would end up with a lot of XSL templates, which are mostly identical! ##
 
 That's true. But that isn't a problem, is it? In fact, it's ideal! Think about all the features that come straight out of the box:
 
@@ -67,8 +67,7 @@ That's true. But that isn't a problem, is it? In fact, it's ideal! Think about a
 
 ## What about the content? ##
 
-If you think 'content' and not 'pages' the most obvious thing to do is to create a data source called 'Page Content'.
-This could have your common fields like 'title', 'content', and one field provided by an extension: a ['pages' field](https://github.com/symphonycms/pagesfield). This allows you to link your entry to a page. Now when you create your data source, filter the pages field by `{$current-page}` to get the correct entry.
+Create a data source called 'Page Content'. This can have your common fields like _title_, _body_, and one field provided by an extension: a [_pages_ field](https://github.com/symphonycms/pagesfield). This allows you to link your entry to a page. Now when you create your data source, filter the pages field by `{$current-page}` to get the correct entry.
 
 The XSLT could look something like this:
 
@@ -101,7 +100,7 @@ This makes it quite easy to manage your static content, and provides a simple wa
 
 ## Hold the phone! All of this means my client will not be able to add new pages by himself! ##
 
-That's also true. But is adding pages _really_ what your client wants? In my experience as a web developer, I've found that 99% of my clients don't need to add new pages to their site on a regular basis. What they **do** add are:
+That's also true. But is adding pages really what your client wants? In my experience as a web developer, I've found that 99% of my clients don't need to add new pages to their site on a regular basis. What they do add are:
 
 * News items
 * Projects
@@ -111,15 +110,15 @@ That's also true. But is adding pages _really_ what your client wants? In my exp
 * FAQs
 * Pictures
 
-All these items should have their own section and their own page so you would end up with URLs like:
+All these items will have their own section and their own page, resulting in URLs like:
 
 * www.your-website.com/news/handle/
 * www.your-website.com/projects/handle/
 * www.your-website.com/publications/handle/
 * www.your-website.com/downloads/category/
 
-Now if you look at 'projects' or 'publications' in this example, it would appear that each project and publication would
-have its own page. But in reality, you only have one XSL template which deals with the logic. An even better approach is to add a detail sub-page; this keeps your XSL clean and reduces processing time spent on loading data sources which will not be
+Now if you look at _projects_ or _publications_ in this example, it would appear that each project or publication would
+have its own page. But in reality, you only have one XSL template that deals with the logic. An even better approach is to add a detail sub-page; this keeps your XSL clean and reduces page rendering time spent on extraneous data sources which will not be
 used. In the above example, the URLs would become:
 
 * www.your-website.com/news/ _= news homepage, showing the latest 2 items for example._
