@@ -254,6 +254,15 @@ These files need to be edited now to contain the following lines. You can use yo
 	*
 	!.gitignore
 
+*In Terminal, do the following*
+
+	echo "*" >> manifest/cache/.gitignore
+	echo "*" >> manifest/logs/.gitignore
+	echo "*" >> manifest/tmp/.gitignore
+	echo "!.gitignore" >> manifest/cache/.gitignore
+	echo "!.gitignore" >> manifest/logs/.gitignore
+	echo "!.gitignore" >> manifest/tmp/.gitignore
+
 This tells git to ignore every file except for the ignore file itself, which is handy as git won’t try and merge temp files, cache files or logs.
 
 Now, we will use this manifest folder to create our live and development manifests.
