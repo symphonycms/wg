@@ -291,10 +291,11 @@ Easy as that. Now we need to let Git see that we have three extra folders to tra
 
 Good question. Because of the nature of the `manifest` folder for Symphony, we never track it's content as it can get very heavy with temp files, cache files etc, and constantly merging them with each commit will be tedious, especially when they are only relevant to the current install of Symphony.
 
-Symphony uses the `.gitignore` file at it's root to ignore the `manifest` *folder*, but our *symbolic link* will not be ignored as standard. We want our other `manifest` folders to be tracked by Git, so that when we deploy to a server, we can create a symbolic link there too, and have our config file ready and waiting to work. So, to ignore the `manifest` sym-link, edit your root .gitignore file, and under the line `manifest/` add `manifest`. Like so
+Symphony uses the `.gitignore` file at it's root to ignore the `manifest` *folder*, but our *symbolic link* will not be ignored as standard. We want our other `manifest` folders to be tracked by Git, so that when we deploy to a server, we can create a symbolic link there too, and have our config file ready and waiting to work. So, to ignore the `manifest` sym-link, edit your root .gitignore file, and add `manifest`. Like so
 
-	manifest/
-	manifest
+*In Terminal, add to `.gitignore`*
+
+	echo "manifest" >> .gitignore
 
 *In Terminal, track the `manifest` folders and commit them*
 
