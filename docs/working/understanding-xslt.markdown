@@ -71,9 +71,9 @@ On the whole the syntax should feel vaguely familiar, and if you’ve got a keen
       </li>
     </xsl:template>
 
-type=”translation”
-
-“Here’s the template I want you to use for those entry items. Just create a list item (`li`) element and inside it output the entry’s title.”
+> ###### Translation”
+> 
+> “Here’s the template I want you to use for those entry items. Just create a list item (`li`) element and inside it output the entry’s title.”
 
 Your final template should look like this (I’ve emphasized the bits I asked you to add):
 
