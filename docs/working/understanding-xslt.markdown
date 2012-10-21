@@ -878,7 +878,7 @@ As you can see, there’s not much that you need to do. In the root template (I�
 
 Now the last thing you’ll need to do is beef up the list items that are being output by the recent posts entry template. Right now, they just contain title text, but as you can see in the desired output, you’re aiming for a linked title heading, a paragraph containing the date, and then the entry’s textual content.
 
-Building the title heading should be fairly easy. The `<h2>` and the <a> can be literal result elements. For the link’s content, we just need to use value-of to grab the title. The attribute is the only tricky bit. You’ll recall that individual posts will have URLs like `posts/category/title`. So you’ll have to piece together the anchor’s href attribute out of several different bits:
+Building the title heading should be fairly easy. The `<h2>` and the `<a>` can be literal result elements. For the link’s content, we just need to use `value-of` to grab the title. The attribute is the only tricky bit. You’ll recall that individual posts will have URLs like `posts/category/title`. So you’ll have to piece together the anchor’s `href` attribute out of several different bits:
 
 - The website’s base URL, which we can get from `/context/system/site-url`
 - The entry’s category: `category/@handle` (you want the URL-friendly version provided by the element’s handle)
