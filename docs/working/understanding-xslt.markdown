@@ -1,4 +1,7 @@
+# XSLT Chapter
+
 ...
+
 In this chapter, you’ll learn how to template a Symphony website—in other words, how to define the output that will be returned to your visitors. Most often, you’ll be outputting HTML pages, but not always. You can also output Atom feeds, JSON documents, raw XML, or pretty much any other text-based format you can imagine. For the sake of your modest blog project, though, we’ll stick to plain old XHTML (XML-flavored HTML), at least for now.
 
 This chapter’s going to be a little more challenging than the previous few. Although Symphony’s templating layer is structurally very simple, conceptually it’s different than systems you may have encountered elsewhere. On top of that, it’s powered by XSLT, which is a language unto itself (and one you may know nothing about). But just because it’s going to be challenging doesn’t mean it can’t be fun. In fact, if I do my job well, you’ll leave this chapter excited about XSLT and eager to learn more.
