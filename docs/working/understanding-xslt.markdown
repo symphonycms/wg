@@ -877,6 +877,7 @@ As you can see, there’s not much that you need to do. In the root template (I�
 2.	Delete the `<h2>Recent Posts</h2>` line
 3.	Add an id attribute to the `<ul>` element, so it looks like this:
 
+
 	   <ul id=”posts”>
 
 Now the last thing you’ll need to do is beef up the list items that are being output by the recent posts entry template. Right now, they just contain title text, but as you can see in the desired output, you’re aiming for a linked title heading, a paragraph containing the date, and then the entry’s textual content.
