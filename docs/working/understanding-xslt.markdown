@@ -54,14 +54,14 @@ On the whole the syntax should feel vaguely familiar, and if you’ve got a keen
 
 5.	Just below the line containing `<h1><xsl:value-of select=”data/context/view/title”/></h1>`, enter:
 
-  <h2>Recent Posts</h2>
-  <ul>
-    <xsl:apply-templates select=”recent-posts/entry”/>
-  </ul>
+    <h2>Recent Posts</h2>
+    <ul>
+      <xsl:apply-templates select=”recent-posts/entry”/>
+    </ul>
   
-  type=”translation”
-
-“Output a second-level header (`h2`) element containing the text Recent Posts, followed by an unordered list (`ul`) element. Inside the unordered list, I want you to apply templates to the entry items being returned by my Recent Posts data source.”
+> ###### Translation”
+> 
+> “Output a second-level header (`h2`) element containing the text Recent Posts, followed by an unordered list (`ul`) element. Inside the unordered list, I want you to apply templates to the entry items being returned by my Recent Posts data source.”
 
 6.	Now, after `</xsl:template>` and before `</xsl:stylesheet>`, enter:
 
