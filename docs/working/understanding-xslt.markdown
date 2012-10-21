@@ -13,15 +13,19 @@ We’ll start by talking about that conceptual difference, then, in order to exp
 
 Before we get started exploring Symphony’s templating layer, though, let’s try a sample exercise to get your feet wet.
 
-1.	Go to Framework > Views
-2.	Click “Home” to edit your Home view
-3.	You’ll see two tabs in the view editor, “Configuration” and “Template” (Figure 8-1)
-    - Figure 8-1	[f0801.png]
-4.	Click “Template”
+(1)	Go to Framework > Views
+
+(2)	Click “Home” to edit your Home view
+
+(3)	You’ll see two tabs in the view editor, “Configuration” and “Template” (Figure 8-1)
+
+> Figure 8-1	[f0801.png]
+
+(4)	Click “Template”
 
 The view template editor is fairly simple (Figure 8-2). It contains a large textarea for your template code, and a list of available XSLT utilities (more on those later).
 
-Figure 8-2	[f0802.png]
+> Figure 8-2	[f0802.png]
 
 By default, Symphony generates a simple starter template for each new view—just a placeholder that outputs an XHTML page with some basic info about the view and its data. Don’t panic if any of the code scares you. By the end of this chapter, you’ll be comfortable with all of it.
 
@@ -52,7 +56,7 @@ The starter template looks like this:
 
 On the whole the syntax should feel vaguely familiar, and if you’ve got a keen eye you’ll notice some HTML in there. For now, we’re just going to make some very simple changes to this template so it will output the entry titles being returned by your Recent Posts data source.
 
-5.	Just below the line containing `<h1><xsl:value-of select=”data/context/view/title”/></h1>`, enter:
+(5)	Just below the line containing `<h1><xsl:value-of select=”data/context/view/title”/></h1>`, enter:
 
     <h2>Recent Posts</h2>
     <ul>
@@ -63,7 +67,7 @@ On the whole the syntax should feel vaguely familiar, and if you’ve got a keen
 > 
 > “Output a second-level header (`h2`) element containing the text Recent Posts, followed by an unordered list (`ul`) element. Inside the unordered list, I want you to apply templates to the entry items being returned by my Recent Posts data source.”
 
-6.	Now, after `</xsl:template>` and before `</xsl:stylesheet>`, enter:
+(6)	Now, after `</xsl:template>` and before `</xsl:stylesheet>`, enter:
 
     <xsl:template match=”recent-posts/entry”>
       <li>
@@ -71,7 +75,8 @@ On the whole the syntax should feel vaguely familiar, and if you’ve got a keen
       </li>
     </xsl:template>
 
-> ###### Translation”
+
+> ###### Translation
 > 
 > “Here’s the template I want you to use for those entry items. Just create a list item (`li`) element and inside it output the entry’s title.”
 
@@ -110,11 +115,11 @@ Your final template should look like this (I’ve emphasized the bits I asked yo
     
     </xsl:stylesheet>
 
-7.	Click “Save Changes”
+(7)	Click “Save Changes”
 
 If you visit your Home view now, you should see something like Figure 8-3.
 
-Figure 8-3	[f0803.png]
+> Figure 8-3	[f0803.png]
 
 It’s pretty barebones at the moment, I’ll admit, but it’s something. The content that you modeled and created yourself back in Chapter 5 has finally found its way to your adoring public.
 
@@ -155,7 +160,7 @@ The templating layer is made up of view templates and XSLT utilities. Every view
 
 Figure 8-4 illustrates the templating process:
 
-Figure 8-4	[f0804.png]
+> Figure 8-4	[f0804.png]
 
 Both view templates and XSLT utilities are simply vanilla XSLT stylesheets. No custom syntax or special processing required. So in order to understand how Symphony’s templating system works, you just need to understand how XSLT works.
 
@@ -188,7 +193,7 @@ So here’s how it all works...
 
 XSLT defines sets of instructions that are used to transform source XML and create some kind of output (Figure 8-5).
 
-Figure 8-5	[f0805.png]
+> Figure 8-5	[f0805.png]
 
 Let’s look at a few very simplistic examples of this process to give you an idea of what I mean. Just try to follow along as best you can, but don’t panic if anything confuses you—we’ll go through it all in more detail below.
 
@@ -753,7 +758,7 @@ Your home view template’s output element begins by setting the output method a
 
 Most of the remaining top-level elements are seldom-used in a Symphony context, so most of the stylesheets you’ll create will have a structure that looks more or less like Figure 8-6:
 
-Figure 8-6	[f0806.png]
+> Figure 8-6	[f0806.png]
 
 Exhale. That concludes your whirlwind tour of XSLT. Hopefully you’ve begun to see how it can empower you to craft elegant, modular, content-driven presentation systems. But if you’re not impressed yet, just know that it gets a lot cooler than this. We’re barely scratching the surface here. The point of this walkthrough has just been to expose you to XSLT’s syntax and basic structures so that you have a point of reference as we begin reviewing the language’s fundamentals.
 
@@ -948,7 +953,7 @@ That’ll make your site a bit more presentable for the time being. Here’s the
 
 Got it? Ok, save the template. Now if you visit your home view you should see the full posts being displayed (Figure 8-7). Don’t worry that there’s no navigation yet. We’ll get to that shortly.
 
-Figure 8-7	[f0807.png]
+> Figure 8-7	[f0807.png]
 
 #### Post View
 
