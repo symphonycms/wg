@@ -873,7 +873,7 @@ Pretty simple, and thankfully, the default template has gotten you much of the w
 As you can see, there’s not much that you need to do. In the root template (I’m going to adopt the convention of referring to template rules according the nodes they match), you’ll just replace the content of the `<h1>` with your site name, get rid of the “Recent Posts” `<h2>`, and add an id to the posts list. Let’s take care of all that now.
 
 1.	In the `<h1>`, change the select attribute of the value-of element to context/website/name. So the line should read:
-    - <h1><xsl:value-of select=”context/website/name”/></h1>
+    - `<h1><xsl:value-of select=”context/website/name”/></h1>`
 2.	Delete the `<h2>Recent Posts</h2>` line
 3.	Add an id attribute to the <ul> element, so it looks like this:
 
