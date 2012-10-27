@@ -312,20 +312,14 @@ Having reviewed all the options available, let’s go ahead and create another d
     > You’ll use this sort of syntax a lot when creating data sources and events. It mirrors XPath’s attribute value template syntax (see Appendix C), which uses curly braces to wrap expressions that need to be evaluated rather than taken literally, and dollar signs as prefixes for parameters. (Don’t stress out; we’ll talk more about XPath in Chapter 8).
     > 
     > Let’s imagine your view’s title URL parameter is set to choosing-a-stripper. Here’s how the system would interpret the following filter values:
+    >  
+    > | Entering... | ...would filter using the string |
+    > | ----------- | -------------------------------- |
+    > | title       | title                            |
+    > | $title      | $title                           |
+    > | {title}     | title                            |
+    > | {$title}    | choosing-a-stripper              |
     > 
-    > Entering...
-    > 
-    > ...would filter using the string
-    
-        title
-        title
-        $title
-        $title
-        {title}
-        title
-        {$title}
-        choosing-a-stripper
-    
     > We’ll discuss filtering syntax in more detail below.
     
 13. Click “Add Filter” one more time
@@ -367,22 +361,12 @@ The filtering tool you saw in Figure 7-5 provides a straightforward workflow for
 > 
 > This probably sounds a lot more complicated than it actually is. In truth, you likely formulate rules like this every day—when you’re choosing a place to eat lunch, for instance:
 > 
-Attribute (Field)
-Filter Mode
-Value Expression
-Distance
-is within
-1 mile
-Cost of lunch
-is less than
-$10
-Quality of food
-is
-yummy
-Kitchen
-does not contain
-roaches, rats, open bottles of poison
-
+> | Attribute (Field) | Filter Mode      | Value Expression                      |
+> | ----------------- | ---------------- | ------------------------------------- |
+> | Distance          | is within        | 1 mile                                |
+> | Cost of lunch     | is less than     | $10                                   |
+> | Quality of food   | is               | yummy                                 |
+> | Kitchen           | does not contain | roaches, rats, open bottles of poison |
 
 #### Filter Modes
 
