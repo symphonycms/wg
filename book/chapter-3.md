@@ -146,22 +146,29 @@ Now that you’ve decided on an installation method, let’s get Symphony onto y
 1.	Grab the current release package from http://symphony-cms.com/download/releases/current/ and save it to a local directory.
 2.	Extract the package.
 3.	Optional. When starting with a completely clean system (which we will be for this book), you should delete the workspace/ directory.
-4.	Move the contents of the extracted directory to the desired location on your server. Note that you don’t want to include the package directory itself (the one named symphony-n.n.n where n.n.n is the version number); you only want to include its contents. In other words, you want the index.php file right in the directory where you want to run Symphony.
-5.	Use your file browser or FTP client to temporarily set permissions on the root directory (the one you just installed to) and the symphony/ directory to 777 (read, write, and execute for all). Then set permissions on the workspace/ directory to 777 and tell your client to apply the changes recursively (to all subfolders). Don't worry, we’ll undo this step and tighten up permissions after installing.
+4.	Move the contents of the extracted directory to the desired location on your server. Note that you don’t want to include the package directory itself (the one named `symphony-n.n.n` where `n.n.n` is the version number); you only want to include its contents. In other words, you want the index.php file right in the directory where you want to run Symphony.
+5.	Use your file browser or FTP client to temporarily set permissions on the root directory (the one you just installed to) and the `symphony/` directory to `777` (read, write, and execute for all). Then set permissions on the `workspace/` directory to `777` and tell your client to apply the changes recursively (to all subfolders). Don't worry, we’ll undo this step and tighten up permissions after installing.
 
 #### Using a .Zip Package and the Command Line
 
-1.	cd into the directory where you’d like to install Symphony (usually the server’s web root).
-2.	Execute one of the following commands, depending on whether your server supports wget or curl:  
-`wget http://symphony-cms.com/download/releases/current && unzip symphony-n.n.n.zip && rm symphony-n.n.n.zip && mv symphony-n.n.n/* . && rmdir symphony-n.n.n`  
-`curl -L http://symphony-cms.com/download/releases/current > symphony.zip && unzip symphony.zip && rm symphony.zip && mv symphony-n.n.n/* . && rmdir symphony-n.n.n`  
-Where n.n.n is the version of Symphony you're installing.
-3.	Optional. When starting with a completely clean system (which we are for this book), you should delete the workspace/ directory:
-rm -R workspace
-4.	Set temporary permissions for the install script:
-chmod 777 symphony .
-chmod -R 777 workspace
-Don't worry. We’ll undo this step and tighten up permissions after installing.
+1. cd into the directory where you’d like to install Symphony (usually the server’s web root).
+2. Execute one of the following commands, depending on whether your server supports wget or curl:  
+
+        wget http://symphony-cms.com/download/releases/current && unzip symphony-n.n.n.zip && rm symphony-n.n.n.zip && mv symphony-n.n.n/* . && rmdir symphony-n.n.n
+        curl -L http://symphony-cms.com/download/releases/current > symphony.zip && unzip symphony.zip && rm symphony.zip && mv symphony-n.n.n/* . && rmdir symphony-n.n.n
+        
+    Where `n.n.n` is the version of Symphony you're installing.
+
+3. Optional. When starting with a completely clean system (which we are for this book), you should delete the workspace/ directory:
+
+        rm -R workspace
+
+4. Set temporary permissions for the install script:
+
+        chmod 777 symphony .
+        chmod -R 777 workspace
+    
+    Don't worry. We’ll undo this step and tighten up permissions after installing.
 
 #### Using Git
 
@@ -170,21 +177,34 @@ Don't worry. We’ll undo this step and tighten up permissions after installing.
 A) Make sure you’ve safely backed up its contents and emptied it, and then remove the directory (in the example above, you’d execute the command rmdir html).
 B) If there are contents inside it that you cannot delete, you can clone the repository into a subdirectory, and then move all the files and directories (including the hidden .git directory) back up into the main directory.
 3.	Clone the Symphony Git repository using the following command:
-git clone git://github.com/symphonycms/symphony-3.git directory
-Where directory is the name of the directory into which you’d like to install Symphony. For example, if you’re installing to your server’s web root at public/html, you’ll want to use html in the above command.
+
+        git clone git://github.com/symphonycms/symphony-3.git directory
+
+    Where directory is the name of the directory into which you’d like to install Symphony. For example, if you’re installing to your server’s web root at public/html, you’ll want to use html in the above command.
+
 4.	cd into your installation directory:
-cd directory
-Where directory is the name of the directory into which you just cloned the repo
+
+        cd directory
+
+    Where directory is the name of the directory into which you just cloned the repo
+
 5.	Grab the default extensions:
-git submodule init
-git submodule update
+
+        git submodule init
+        git submodule update
+
 6.	Optional. If you’ve decided to include a starter package rather than start with a clean system, clone the package into your workspace directory:
-git clone git://package-git-url workspace
-Where package-git-url is the location of the starter package’s Git repository
+
+        git clone git://package-git-url workspace
+
+    Where package-git-url is the location of the starter package’s Git repository
+
 7.	Set temporary permissions for the install script:
-chmod 777 symphony .
-chmod -R 777 workspace
-Don't worry. We’ll undo this step and tighten up permissions after installing.
+
+        chmod 777 symphony .
+        chmod -R 777 workspace
+    
+    Don't worry. We’ll undo this step and tighten up permissions after installing.
 
 > ###### Note
 > 
@@ -208,12 +228,17 @@ You'll probably have several different options for creating a MySQL data-base, i
 
 #### Using the Command Line MySQL Client
 
-1.	Connect to the MySQL client:  
-`mysql -u username -p`  
-Replace username with your MySQL username. You’ll be prompted for your MySQL password. Enter it.
+1.	Connect to the MySQL client:
+
+        mysql -u username -p
+
+    Replace username with your MySQL username. You’ll be prompted for your MySQL password. Enter it.
+
 2.	In the MySQL prompt (mysql>), type:  
-`CREATE DATABASE db_name CHARACTER SET utf8 COLLATE utf8_unicode_ci;`  
-Be sure to replace `db_name` with a suitable database name, like symphony. You should see a message telling you that the query was executed. Type EXIT.
+
+        CREATE DATABASE db_name CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+
+    Be sure to replace `db_name` with a suitable database name, like symphony. You should see a message telling you that the query was executed. Type EXIT.
 
 ## Running the Installer
 
