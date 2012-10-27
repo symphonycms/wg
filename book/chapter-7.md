@@ -40,7 +40,7 @@ Now, if you recall, in Chapter 6 you decided that you wanted your blog’s Home 
 
 Now I’m going to show you something really cool. Navigate to your blog’s Home view, but append ?debug to the end of the URL (so, http://example.com/?debug). You’ll see something that looks like Figure 7-2:
 
-        Figure 7-2	[f0702.png]
+    Figure 7-2	[f0702.png]
 
 What you’re looking at is Symphony’s debug devkit—an interface, provided by one of Symphony’s core extensions, that allows you to go behind the scenes of any Symphony view (only if you’re logged into the system, of course). The debug devkit will show you a view’s XML source content, the stylesheets that have been used to transform it, and the result of that transformation (e.g. HTML). You can also examine the parameters available to the view at runtime. In short, it’s X-Ray vision for every view on your site—allowing you to see exactly how it was built and from what pieces. Neat, right?
 
