@@ -17,17 +17,17 @@ Now, the [Symphony book is free to read on GitHub](https://github.com/symphonycm
 
 ## Chapters
 
-- [Contents](book-contents.md)
-- [Chapter 1](chapter-1.md)
-- [Chapter 2](chapter-2.md)
-- [Chapter 3](chapter-3.md)
-- [Chapter 4](chapter-4.md)
-- [Chapter 5](chapter-5.md)
-- [Chapter 6](chapter-6.md)
-- [Chapter 7](chapter-7.md)
-- [Chapter 8](chapter-8.md)
-- [Chapter 9](chapter-9.md)
-- [Chapter 10](chapter-10.md)
-- [Chapter 11](chapter-11.md)
+- [Contents](https://github.com/symphonycms/wg/tree/master/book/book-contents.md)
+- [Chapter 1](https://github.com/symphonycms/wg/tree/master/book/chapter-1.md)
+- [Chapter 2](https://github.com/symphonycms/wg/tree/master/book/chapter-2.md)
+- [Chapter 3](https://github.com/symphonycms/wg/tree/master/book/chapter-3.md)
+- [Chapter 4](https://github.com/symphonycms/wg/tree/master/book/chapter-4.md)
+- [Chapter 5](https://github.com/symphonycms/wg/tree/master/book/chapter-5.md)
+- [Chapter 6](https://github.com/symphonycms/wg/tree/master/book/chapter-6.md)
+- [Chapter 7](https://github.com/symphonycms/wg/tree/master/book/chapter-7.md)
+- [Chapter 8](https://github.com/symphonycms/wg/tree/master/book/chapter-8.md)
+- [Chapter 9](https://github.com/symphonycms/wg/tree/master/book/chapter-9.md)
+- [Chapter 10](https://github.com/symphonycms/wg/tree/master/book/chapter-10.md)
+- [Chapter 11](https://github.com/symphonycms/wg/tree/master/book/chapter-11.md)
 
-The [Chapter 8](chapter-8.md) is a particularly good read for anyone who is just getting started with XSLT.
+The [Chapter 8](https://github.com/symphonycms/wg/tree/master/book/chapter-8.md) is a particularly good read for anyone who is just getting started with XSLT.
