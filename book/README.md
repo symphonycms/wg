@@ -18,16 +18,16 @@ Now, the [Symphony book is free to read on GitHub](https://github.com/symphonycm
 ## Chapters
 
 - [Contents](https://github.com/symphonycms/wg/tree/master/book/book-contents.md)
-- [Chapter 1](https://github.com/symphonycms/wg/tree/master/book/chapter-1.md)
-- [Chapter 2](https://github.com/symphonycms/wg/tree/master/book/chapter-2.md)
-- [Chapter 3](https://github.com/symphonycms/wg/tree/master/book/chapter-3.md)
-- [Chapter 4](https://github.com/symphonycms/wg/tree/master/book/chapter-4.md)
-- [Chapter 5](https://github.com/symphonycms/wg/tree/master/book/chapter-5.md)
-- [Chapter 6](https://github.com/symphonycms/wg/tree/master/book/chapter-6.md)
-- [Chapter 7](https://github.com/symphonycms/wg/tree/master/book/chapter-7.md)
-- [Chapter 8](https://github.com/symphonycms/wg/tree/master/book/chapter-8.md)
-- [Chapter 9](https://github.com/symphonycms/wg/tree/master/book/chapter-9.md)
-- [Chapter 10](https://github.com/symphonycms/wg/tree/master/book/chapter-10.md)
-- [Chapter 11](https://github.com/symphonycms/wg/tree/master/book/chapter-11.md)
+- [Chapter 1. Why You Need Symphony](https://github.com/symphonycms/wg/tree/master/book/chapter-1.md)
+- [Chapter 2. Symphony in Action](https://github.com/symphonycms/wg/tree/master/book/chapter-2.md)
+- [Chapter 3. Getting Started](https://github.com/symphonycms/wg/tree/master/book/chapter-3.md)
+- [Chapter 4. Symphony Anatomy](https://github.com/symphonycms/wg/tree/master/book/chapter-4.md)
+- [Chapter 5. Content](https://github.com/symphonycms/wg/tree/master/book/chapter-5.md)
+- [Chapter 6. Front-end](https://github.com/symphonycms/wg/tree/master/book/chapter-6.md)
+- [Chapter 7. Data Flow](https://github.com/symphonycms/wg/tree/master/book/chapter-7.md)
+- [Chapter 8. Templating](https://github.com/symphonycms/wg/tree/master/book/chapter-8.md)
+- [Chapter 9. System Management](https://github.com/symphonycms/wg/tree/master/book/chapter-9.md)
+- [Chapter 10. Planning Symphony Projects](https://github.com/symphonycms/wg/tree/master/book/chapter-10.md)
+- [Chapter 11. Adaptive Techniques](https://github.com/symphonycms/wg/tree/master/book/chapter-11.md)
 
 The [Chapter 8](https://github.com/symphonycms/wg/tree/master/book/chapter-8.md) is a particularly good read for anyone who is just getting started with XSLT.
